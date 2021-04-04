@@ -2,7 +2,7 @@
   "name": "New Calculator",
   "version": "0.0.0",
   "manifest_version": 2,
-  "description": "My cat&#39;s meow extension",
+  "description": "Falta Descripcion Personalizada",
   "author": "David Gamboa",
   "homepage_url": "https://github.com/HasselGR/new-calculator",
   "permissions" :[ "tabs", "<all_urls>", "activeTab"],
