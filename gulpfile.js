@@ -18,7 +18,7 @@ export const paths = {
   ],
 
   images: 'src/images/**/*',
-  
+
   _locales: 'src/_locales/**/*',
 
   manifest: 'src/manifest.json',
@@ -30,6 +30,6 @@ export const paths = {
 }
 
 
-gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, markup, images, manifest)))
+gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, markup, _locales, images, manifest)))
 gulp.task('dev', gulp.series('build', watch))
 gulp.task('bundle', gulp.series('build', bundle))
