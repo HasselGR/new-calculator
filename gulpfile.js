@@ -1,5 +1,5 @@
 import gulp from 'gulp'
-import { clean, scripts, styles, markup, images, manifest, watch, bundle } from './tasks'
+import { clean, scripts, styles, markup, images, manifest, watch, bundle, _locales } from './tasks'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -18,6 +18,8 @@ export const paths = {
   ],
 
   images: 'src/images/**/*',
+  
+  _locales: 'src/_locales/**/*',
 
   manifest: 'src/manifest.json',
 

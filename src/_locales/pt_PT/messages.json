@@ -1,0 +1,11 @@
+{
+  "appName": {
+    "message": "New Calculator"
+  },
+  "appDesc": {
+    "message": "Confira o desempenho de sua equipe, a qualquer hora e em qualquer lugar."
+  },
+  "popupMessage": {
+    "message": "Veja como vão as tabelas das ligas mais famosas"
+  }
+}
