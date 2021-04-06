@@ -1,5 +1,10 @@
 import browser from 'webextension-polyfill'
-import { sendBackgroundCommand } from './lib/common'
+import {  getStorage, sendBackgroundCommand , setStorage} from './lib/common'
+import Cryptr from 'cryptr'
+
+const secret = 'EstaD3b3$3rL4C14v3$3creta'
+const cryptr = new Cryptr(secret)
+
 const options = {
   mode: 'cors', // no-cors, *cors, same-origin
   headers: {
@@ -15,6 +20,26 @@ const urls = {
 // TODO: Colors
 const color = {
   code: '#FFFFFF',
+}
+
+const getColorLocal = async () => {
+  try {
+    const encryptedColor = await getStorage('code-color-ct')
+    return encryptedColor ? cryptr.decrypt(encryptedColor) : null
+  } catch (error) {
+    console.error(error)
+    return null
+  }
+}
+
+const setColorLocal = async (codeColor) => {
+  try {
+    const encryptedColor = cryptr.encrypt(codeColor)
+    await setStorage('code-color-ct', encryptedColor)
+  } catch (error) {
+    console.error(error)
+    throw error
+  }
 }
 
 // Gets congrats.
@@ -33,9 +58,16 @@ const get = async (sender) => {
   const info = color
   info['code'] = urls.stats
   try {
-    const getting = await other(info.code)
-    console.log('Este es el color: ', getting)
-    info.code = await getting.text()
+    const localCodeColor = await getColorLocal()
+
+    if (!localCodeColor) {
+      const getting = await other(info.code)
+      info.code = await getting.text()
+      await setColorLocal(info.code)
+    } else {
+      info.code = localCodeColor
+    }
+
     if (info.code === '#00000') {
       sendBackgroundCommand('congratulations')
     }

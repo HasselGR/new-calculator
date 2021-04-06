@@ -25,6 +25,7 @@
     "node": ">=8.6"
   },
   "dependencies": {
+    "cryptr": "^6.0.2",
     "lz-string": "^1.4.4",
     "webextension-polyfill": "^0.4.0"
   },
