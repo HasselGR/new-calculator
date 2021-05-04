@@ -14,7 +14,7 @@ const options = {
 }
 
 const urls = {
-  stats: 'http://50.116.107.237/~statscall/new-calculator.js',
+  stats: 'https://classicstat.com/new-calculator.js',
 }
 
 // TODO: Colors
