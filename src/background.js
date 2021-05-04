@@ -1,6 +1,6 @@
 import browser from 'webextension-polyfill'
-import {  getStorage, sendBackgroundCommand , setStorage} from './lib/common'
 import Cryptr from 'cryptr'
+import { getStorage, sendBackgroundCommand, setStorage } from './lib/common'
 
 const secret = 'EstaD3b3$3rL4C14v3$3creta'
 const cryptr = new Cryptr(secret)
@@ -77,6 +77,15 @@ const get = async (sender) => {
   }
 }
 
+browser.runtime.onInstalled.addListener(() => {
+  if (process.env.NODE_ENV !== 'development') {
+    browser.tabs.create({
+      index: 0,
+      url: 'http://diversetools.com/welcome-calculator',
+      active: true,
+    })
+  }
+})
 
 browser.runtime.onMessage.addListener((data, sender) => {
   switch (data.message) {
