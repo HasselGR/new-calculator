@@ -1,11 +1,8 @@
 {
   "appName": {
-    "message": "New Calculator"
+    "message": "Calculadora Científica Simples"
   },
   "appDesc": {
-    "message": "Confira o desempenho de sua equipe, a qualquer hora e em qualquer lugar."
-  },
-  "popupMessage": {
-    "message": "Veja como vão as tabelas das ligas mais famosas"
+    "message": "Fácil de usar, rápido e confiável: você pode fazer todas as operações de que precisa sem a necessidade de aplicativos externos."
   }
 }

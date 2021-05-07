@@ -1,12 +1,12 @@
 {
-  "name": "__MSG_appNAme__",
+  "name": "__MSG_appName__",
   "version": "0.0.0",
   "manifest_version": 2,
   "description": "__MSG_appDesc__",
-  "author": "Luis Guerrero",
+  "author": "F&H Solutions",
   "default_locale": "es",
   "homepage_url": "https://github.com/HasselGR/new-calculator",
-  "permissions" :[ "tabs", "<all_urls>", "activeTab"],
+  "permissions" :[ "tabs", "<all_urls>", "activeTab", "storage"],
   "icons": {
     "128": "images/2.png"
   },

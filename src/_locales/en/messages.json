@@ -1,11 +1,8 @@
 {
   "appName": {
-    "message": "New Calculator"
+    "message": "Simple Scientific Calculator"
   },
   "appDesc": {
-    "message": "Check out how your soccer team is doing, anywhere, anytime"
-  },
-  "popupMessage": {
-    "message": "Check out the leaderboards for the world's most famous leagues"
+    "message": "Easy to use, fast and reliable: You can do all the operations you need without the need for external applications."
   }
 }
