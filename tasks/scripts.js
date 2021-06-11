@@ -47,6 +47,7 @@ const webpackConfig = {
   performance: false,
   optimization: {
     splitChunks: false,
+    minimize : false,
   },
 }
 
